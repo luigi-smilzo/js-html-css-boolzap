@@ -23,7 +23,8 @@ body {
 }
 
 .flex-c {
-    flex-flow: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .align-c {
@@ -52,6 +53,10 @@ body {
     justify-content: flex-end;
 }
 
+.justify-btw {
+    justify-content: space-between;
+}
+
 /* LAYOUT */
 #boolzapp {
     height: 95%;
@@ -59,16 +64,69 @@ body {
     background: #999;
 }
 
+/* Sidebar */
 aside {
     height: 100%;
     width: 35%;
-    padding: 10px;
-    background: rgba(0, 255, 0, .1);
 }
 
-.chat-wrapper {
-    background: rgb(247, 255, 173);
-    height: 100%;
-    width: 65%;
+.aside-top {
+    background: #eaeaea;
+    height: 75px;
+    padding: 10px;
+}
+
+.aside-top .avatar img {
+    width: auto;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.options i {
+    font-size: 24px;
+    color: #b1b1b1;
+    margin-right: 20px;
+}
+
+.aside-notifications {
+    background: #9fd8f9;
+    height: 85px;
+    padding: 15px 20px;
+}
+
+.aside-notifications i {
+    padding: 15px 12px;
+    font-size: 24px;
+    color: #9fd8f9;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+.aside-notifications div span {
+    display: block;
+    font-weight: 700;
+}
+
+.aside-notifications div a {
+    color: #666;
+    font-weight: 700;
+}
+
+.aside-search {
+    background: #eee;
+    height: 65px;
+}
+
+.aside-list {
+    background: #ade;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.list-open {
+    height: 85px;
+    background: #abc;
 }
 
