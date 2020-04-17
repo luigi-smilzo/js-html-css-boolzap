@@ -26,5 +26,49 @@ body {
     flex-flow: column;
 }
 
+.align-c {
+    align-items: center;
+}
+
+.align-s {
+    align-items: flex-start;
+}
+
+.align-e {
+    align-items: flex-end;
+}
+
+.justify-c {
+    justify-content: center;
+}
+
+
+.justify-s {
+    justify-content: flex-start;
+}
+
+
+.justify-e {
+    justify-content: flex-end;
+}
+
 /* LAYOUT */
+#boolzapp {
+    height: 95%;
+    width: 80%;
+    background: #999;
+}
+
+aside {
+    height: 100%;
+    width: 35%;
+    padding: 10px;
+    background: rgba(0, 255, 0, .1);
+}
+
+.chat-wrapper {
+    background: rgb(247, 255, 173);
+    height: 100%;
+    width: 65%;
+}
 
