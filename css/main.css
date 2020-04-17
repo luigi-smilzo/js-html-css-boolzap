@@ -104,19 +104,44 @@ aside {
     
 }
 
-.aside-notifications div span {
-    display: block;
-    font-weight: 700;
-}
-
 .aside-notifications div a {
     color: #666;
     font-weight: 700;
+    font-size: 14px;
 }
 
 .aside-search {
-    background: #eee;
-    height: 65px;
+    background: #fafafa;
+    height: 55px;
+    padding: 8px;
+}
+
+.aside-search div {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.aside-search label {
+    flex-basis: 85px;
+    text-align: center;
+    background: #fff;
+    height: 36px;
+    border-right: 1px solid #eee;
+}
+
+.aside-search label i {
+    color: #b1b1b1;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.aside-search input {
+    flex-grow: 1;
+    height: 36px;
+    padding: 10px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 .aside-list {
