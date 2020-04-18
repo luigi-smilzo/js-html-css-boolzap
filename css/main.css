@@ -18,6 +18,10 @@ body {
 }
 
 /* UTILITIES */
+.hide {
+    display: none;
+}
+
 .flex-r {
     display: flex;
 }
@@ -214,9 +218,10 @@ aside {
 }
 
 .chat-main .message {
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .chat-main .message p {
