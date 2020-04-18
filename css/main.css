@@ -73,6 +73,7 @@ body {
 aside {
     height: 100%;
     width: 35%;
+    border-right: 1px solid #ddd;
 }
 
 .aside-top {
@@ -204,6 +205,11 @@ aside {
 .chat-header div span {
     font-size: 14px;
     color: #666;
+}
+
+.chat-main {
+    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
 }
 
 .chat-footer {
