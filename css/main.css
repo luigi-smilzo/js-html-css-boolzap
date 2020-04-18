@@ -225,6 +225,10 @@ aside {
     color: #666;
 }
 
+.chat-footer div i {
+    cursor: pointer;
+}
+
 .chat-footer input {
     height: 100%;
     border: none;
