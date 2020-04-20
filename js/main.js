@@ -3,6 +3,7 @@ $(document).ready(function () {
     // REFERENCES
     var msgInput = $('.chat-footer input');
     var sendIcon = $('.chat-footer .send-icons');
+    var srcInput = $('aside .aside-search input');
 
     // EVENTS
     // Send message Input
@@ -22,6 +23,15 @@ $(document).ready(function () {
         }
     });
 
+    srcInput.keyup(function() {
+        var search = srcInput.val().toLowerCase();
+        $('.list-open').hide();
+        $('.list-open h4').each(function () {
+            if ($(this).text().toLowerCase().includes(search)) {
+                $(this).parent().parent().show();
+            }
+        });
+    });
 }); // <-- End ready
 
 // FUNCTIONS
@@ -60,4 +70,13 @@ function leadZero(param) {
         param = '0' + param;
     }
     return param;
+}
+
+function getNames (param) {
+    var names = [];
+    for (var i = 0; i < param; i++) {
+        var currentName = $('.aside-list h4').attr()
+        names.push(currentName);
+    }
+    return names;
 }

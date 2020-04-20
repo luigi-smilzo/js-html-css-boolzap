@@ -187,6 +187,10 @@ aside {
     line-height: 24px;
 }
 
+.aside-list .list-open div h4 {
+    text-transform: capitalize;
+}
+
 .aside-list .list-open div span {
     color: #aaa;
     font-size: .9em;
