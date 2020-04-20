@@ -229,7 +229,18 @@ aside {
     padding: 60px 115px;
 }
 
+.chat-main-conversation {
+    display: none;
+}
+
+.chat-main-conversation.active {
+    display: flex;
+    flex-direction: column;
+}
+
 .chat-main .message {
+    position: relative;
+    min-width: 150px;
     max-width: 500px;
     border-radius: 10px;
     padding: 5px;
@@ -237,19 +248,23 @@ aside {
 }
 
 .chat-main .message p {
-    width: 90%;
+    width: 100%;
     font-weight: 700;
     font-size: .9rem;
     padding: 10px;
-    margin-bottom: 5px;
     word-wrap:break-word;
+    margin-bottom: 10px;
 }
 
 .chat-main .message .timestamp {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
     flex-basis: 10%;
     font-size: .7rem;
     color: #bbb;
-    align-self: flex-end;
+    text-align: right;
+    padding-top: 5px;
 }
 
 .chat-main .message.sent {
