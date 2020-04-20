@@ -137,7 +137,6 @@ aside {
     text-align: center;
     background: #fff;
     height: 36px;
-    border-right: 1px solid #eee;
 }
 
 .aside-search label i {
@@ -171,6 +170,7 @@ aside {
 .aside-list .list-open:hover,
 .aside-list .list-open.active {
     background: #eaebeb;
+    border-bottom-color: transparent;
 }
 
 .aside-list .list-open:last-of-type {
@@ -185,6 +185,18 @@ aside {
 
 .aside-list .list-open div {
     line-height: 24px;
+}
+
+.aside-list .list-open div span {
+    color: #aaa;
+    font-size: .9em;
+}
+
+.aside-list .list-open .timestamp {
+    flex-basis: 5%;
+    font-size: .8em;
+    align-self: flex-start;
+    margin-top: 5px;
 }
 
 /* Chat box */
