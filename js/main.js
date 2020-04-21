@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
-    // REFERENCES
+
+    /* REFERENCES */
     var msgInput = $('.chat-footer input');
     var sendIcon = $('.chat-footer .send-icons');
     var srcInput = $('aside .aside-search input');
 
-    // EVENTS
+
+    /* EVENTS */
     // Send message Input
     msgInput.on('focus blur', function () {
         $(this).next().children('i').toggleClass('fa-microphone fa-paper-plane');
@@ -21,6 +23,7 @@ $(document).ready(function () {
         }
     });
 
+    // Search bar
     srcInput.keyup(function() {
         var search = $(this).val().toLowerCase().trim();
         $('.list-open h4').each(function () {
@@ -31,9 +34,13 @@ $(document).ready(function () {
             }
         });
     });
+
 }); // <-- End ready
 
-// FUNCTIONS
+
+
+
+/* FUNCTIONS */
 function sendMsg (input) {
     var msgContent = input.val().trim();
 
@@ -46,13 +53,13 @@ function sendMsg (input) {
         newMsg.addClass('sent');
         $('.chat-main-conversation.active').append(newMsg);
         input.val('');
-        scroll ()
+        scroll()
 
         setTimeout(autoReply, 1000);
     }
 }
 
-function autoReply () {
+function autoReply() {
     var newMsg = $('.template .message').clone();
     newMsg.children('p').text('Ok');
     time();
@@ -62,7 +69,7 @@ function autoReply () {
     scroll ()
 }
 
-function time () {
+function time() {
     var date = new Date();
     var hour = leadZero(date.getHours());
     var minutes = leadZero(date.getMinutes());
@@ -76,7 +83,7 @@ function leadZero(param) {
     return param;
 }
 
-function scroll () {
+function scroll() {
     var chatHeight = $('.chat-main-conversation.active').height();
     $('.chat-main').animate({
         scrollTop: chatHeight
