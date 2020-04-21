@@ -274,7 +274,6 @@ aside {
 }
 
 .chat-main .drop-down {
-    display: none;
     position: absolute;
     top: 30px;
     right: 10px;

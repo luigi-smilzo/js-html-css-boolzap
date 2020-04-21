@@ -49,6 +49,13 @@ $(document).ready(function () {
         $('.chat-header img').attr('src', contactAvatar);
     });
 
+    // Message drop-down
+    $('body').on('click','.chat-main .message i', function() {
+        var activeDropDown = $(this).next('.drop-down');
+        $('.chat-main .message i').next().not(activeDropDown).hide();
+        activeDropDown.toggle();
+    });
+
 }); // <-- End ready
 
 
