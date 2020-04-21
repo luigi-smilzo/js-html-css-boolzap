@@ -275,6 +275,7 @@ aside {
 
 .chat-main .drop-down {
     position: absolute;
+    z-index: 1;
     top: 30px;
     right: 10px;
     background: #fff;
@@ -283,6 +284,7 @@ aside {
     font-size: .9rem;
     line-height: 30px;
     color: #666;
+    box-shadow: 0px 2px 5px 0px rgba(110,110,110,.5);
 }
 
 .chat-main .drop-down li:hover {

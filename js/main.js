@@ -56,6 +56,11 @@ $(document).ready(function () {
         activeDropDown.toggle();
     });
 
+    // Delete message
+    $('body').on('click','.drop-down li:nth-child(2)', function() {
+        $(this).parents('.message').remove();
+    });
+
 }); // <-- End ready
 
 
