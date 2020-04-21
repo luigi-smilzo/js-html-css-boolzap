@@ -13,22 +13,21 @@ $(document).ready(function () {
 
     sendIcon.click(function() {
         sendMsg(msgInput);
-        setTimeout(autoReply, 1000);
     });
 
     msgInput.keypress(function(e) {
         if (e.which == 13) {
             sendMsg(msgInput);
-            setTimeout(autoReply, 1000);
         }
     });
 
     srcInput.keyup(function() {
-        var search = srcInput.val().toLowerCase();
-        $('.list-open').hide();
+        var search = $(this).val().toLowerCase().trim();
         $('.list-open h4').each(function () {
             if ($(this).text().toLowerCase().includes(search)) {
-                $(this).parent().parent().show();
+                $(this).parents('.list-open').show();
+            } else {
+                $(this).parents('.list-open').hide();
             }
         });
     });
@@ -42,27 +41,32 @@ function sendMsg (input) {
         var newMsg = $('.template .message').clone();
 
         newMsg.children('p').text(msgContent);
-        timeStamp(newMsg);
+        time();
+        newMsg.children('.timestamp').text(timeStamp);
         newMsg.addClass('sent');
         $('.chat-main-conversation.active').append(newMsg);
         input.val('');
+        scroll ()
+
+        setTimeout(autoReply, 1000);
     }
 }
 
 function autoReply () {
     var newMsg = $('.template .message').clone();
     newMsg.children('p').text('Ok');
-    timeStamp(newMsg);
+    time();
+    newMsg.children('.timestamp').text(timeStamp);
     newMsg.addClass('received');
     $('.chat-main-conversation.active').append(newMsg);
+    scroll ()
 }
 
-function timeStamp (newMsg) {
+function time () {
     var date = new Date();
     var hour = leadZero(date.getHours());
     var minutes = leadZero(date.getMinutes());
-    var timeStamp = hour + ':' + minutes;
-    newMsg.children('.timestamp').text(timeStamp);
+    return timeStamp = hour + ':' + minutes;
 }
 
 function leadZero(param) {
@@ -72,11 +76,9 @@ function leadZero(param) {
     return param;
 }
 
-function getNames (param) {
-    var names = [];
-    for (var i = 0; i < param; i++) {
-        var currentName = $('.aside-list h4').attr()
-        names.push(currentName);
-    }
-    return names;
+function scroll () {
+    var chatHeight = $('.chat-main-conversation.active').height();
+    $('.chat-main').animate({
+        scrollTop: chatHeight
+    });
 }
