@@ -37,14 +37,20 @@ $(document).ready(function () {
 
     // Conversation select
     convList.click(function() {
+
+        // Reset
         convList.not(this).removeClass('active');
         $('.chat-main-conversation').removeClass('active');
-        $(this).addClass('active');
+
+        // Activate selected conversation
         var convData = $(this).attr('data-conversation');
+        $(this).addClass('active');
         $('.chat-main [data-conversation="' + convData + '"]').addClass('active');
 
+        // Change name and avatar in chat header accordingly
         var contactName = $(this).find('h4').text();
         var contactAvatar = $(this).find('img').attr('src');
+        
         $('.chat-header h4').text(contactName);
         $('.chat-header img').attr('src', contactAvatar);
     });
