@@ -41,7 +41,12 @@ $(document).ready(function () {
         $('.chat-main-conversation').removeClass('active');
         $(this).addClass('active');
         var convData = $(this).attr('data-conversation');
-        $('[data-conversation="' + convData + '"]').addClass('active');
+        $('.chat-main [data-conversation="' + convData + '"]').addClass('active');
+
+        var contactName = $(this).find('h4').text();
+        var contactAvatar = $(this).find('img').attr('src');
+        $('.chat-header h4').text(contactName);
+        $('.chat-header img').attr('src', contactAvatar);
     });
 
 }); // <-- End ready

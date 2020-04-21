@@ -222,6 +222,10 @@ aside {
     margin-right: 10px;
 }
 
+.chat-header div h4 {
+    text-transform: capitalize;
+}
+
 .chat-header div span {
     font-size: 14px;
     color: #666;
